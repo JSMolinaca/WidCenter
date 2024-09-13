@@ -1,0 +1,253 @@
+@font-face {
+    font-family: OrelegaOne;
+    src: url("../fonts/Orelega_One/OrelegaOne-Regular.ttf");
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.container {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(3,1fr);
+grid-template-areas: "header"
+                     "main"
+                     "footer";
+height: 100vh;
+}
+
+.header-index {
+background-image: url(../images/Image-aside.png);
+}
+.header {
+display: grid;
+grid-area: header;
+height: 490px;
+background-color: #FFFFFF;
+background-size: cover;
+background-position: center;
+text-align: center;
+}
+
+.nav-bar {
+display: flex;
+justify-content: space-between;
+align-items: start;
+background-color: white;
+}
+
+.logo {
+margin-top: 10px;
+position: absolute;
+}
+
+.tittle {
+margin-right: 130px;
+}
+
+.list-nav {
+display: flex;
+list-style: none;
+letter-spacing: 1px;
+margin-top: 30px;
+position: relative;
+}
+
+.li-header {
+margin: 8px;
+font-weight: bold;
+padding: 10px;
+cursor: pointer;
+}
+
+button {
+margin-top: 35px;
+height: 50px;
+width: 130px;
+border-radius: 10px;
+
+}
+
+.login {
+background-color: #1A1E7C;
+color: #FFFFFF;
+padding: 10px;
+border-radius: 10px;
+}
+
+.register {
+background-color: #0DFF6E;
+padding: 10px;
+border-radius: 10px;
+}
+
+.text-mision {
+display: flex;
+justify-content: center;
+}
+
+.mision-header {
+position: relative;
+top: 120px;
+color: #1A1E7C;
+font-size: 40px;
+font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+}
+
+.image-header {
+position: absolute;
+z-index: 1;
+width: 700px;
+top: 55%;
+left: 24%;
+}
+
+.main {
+display: grid;
+background-color: white;
+grid-area: main;
+height: 800px;
+}
+
+.section-text {
+background-color: #1A1E7C;
+height: 427px;
+}
+
+.container-text {
+position: relative;
+top: 35%;
+text-align: center;
+}
+
+h1 {
+font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+color: white;
+font-size: 40px;
+}
+
+.p-main {
+font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+color: #0DFF6E;
+font-size: 35px;
+}
+
+.img-main {
+width: 120px;
+}
+
+#img-1 {
+position: relative;
+left: 22%;
+}
+
+#img-2 {
+position: relative;
+right: 41%;
+}
+
+#img-3 {
+position: relative;
+bottom: 265px;
+right: 40%;
+}
+
+#img-4 {
+position: relative;
+bottom: 250px;
+left: 13%;
+}
+
+.section-mv {
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+.sect {
+background-color: #1A1E7C;
+width: 300px;
+height: 350px;
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+padding: 20px;
+margin: 10px;
+border-radius: 40px;
+}
+
+h3 {
+font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+color: white;
+font-size: px;
+}
+
+p {
+font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+font-size: 20px;
+color: #0DFF6E;
+}
+
+#mision-mision {
+margin-top: 20px;
+}
+
+footer {
+display: grid;
+background-color: #1A1E7C;
+grid-area: footer;
+height: 230px;
+}
+
+.container-footer {
+display: flex;
+gap: 200px;
+}
+
+.img-sect {
+width: 100px;
+padding: 10px;
+}
+
+.container-oneF {
+display: flex;
+margin: 20px;
+}
+
+.icons {
+width: 40px;
+margin: 9px;
+}
+
+.img-iconsF {
+margin: 20px;
+}
+
+ol {
+list-style-type: none;
+}
+
+.container-footer-text {
+margin-left: 100px;
+}
+
+.text-white {
+color: white;
+font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+padding: 7px;
+margin-top: 6px;
+}
+
+.right {
+position: relative;
+left: 140px;
+}
+
+/* ESTILOS PASA PAGE SALUD */
+.container-salud {
+background-color: #1A1E7C;
+height: 400px;
+}
