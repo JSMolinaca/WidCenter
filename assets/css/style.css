@@ -397,3 +397,10 @@ height: 800px;
     top: 300px;
     left: 1065px;
 }
+
+/* ESTILOS PAGE AFILIATE */
+
+.form-afiliate {
+    display: flex;
+    flex-direction: column;
+}
