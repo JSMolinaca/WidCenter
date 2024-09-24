@@ -579,36 +579,6 @@ a:hover {
     background-color: #1A1E7C;
 }
 
-.background {
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-}
-
-.background .shape {
-    height: 200px;
-    height: 200px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-}
-
-.shape:first-child {
-    background: linear-gradient(#1845ad, #23a2f6);
-    left: -80px;
-    top: -80px;
-}
-
-.shape:last-child {
-    background: linear-gradient(to right, #131313, #462b06);
-    right: -30px;
-    bottom: -80px;
-}
-
 .form-login {
     height: 520px;
     width: 400px;
@@ -704,4 +674,14 @@ a:hover {
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* ESTILOS PARA PAGE DE REGISTER */
+
+.body-register {
+    background-color: #008b28;
+}
+
+.bg-black {
+    color: black;
 }
