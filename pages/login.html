@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="body-login">
-    <form class="form-login" action="">
+    <form class="form-login" action="../conexion.php" method="POST">
         <h3>Inicio Sesion</h3>
         <label class="label-login" for="username">Nombre de Usuario</label>
-        <input class="input" type="text" placeholder="Correo electronico o telefono" id="username">
+        <input class="input" name="username" type="text" placeholder="Correo electronico o telefono" id="username">
         <label class="label-login" for="password">Contraseña</label>
-        <input class="input" type="password" placeholder="Contraseña" id="password">
+        <input class="input" name="password" type="password" placeholder="Contraseña" id="password">
         <button class="button-login">Iniciar Sesion</button>
         <div class="social">
             <div class="go"><i class="fab fa-google"></i> Google</div>
