@@ -400,7 +400,73 @@ height: 800px;
 
 /* ESTILOS PAGE AFILIATE */
 
+.main-afiliate {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-afiliate h2 {
+    color: #2E33D4;
+    margin-bottom: 20px;
+}
+
+.main-afiliate h2 span {
+    color: #1A1E7C;
+}
+
 .form-afiliate {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
+
+.label-a {
+    font-weight: bold;
+    color: #283593;
+    text-align: left;
+}
+
+.input-a {
+    padding: 10px;
+    border: 2px solid #c5cae9;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #283593;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-a:focus {
+    border-color: #283593;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.i-submit {
+    padding: 10px;
+    background-color: #0AFD4E;
+    color: #1A1E7C;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.i-submit:hover {
+    background-color: #0DFF6E;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
