@@ -37,33 +37,69 @@ $citas = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis citas</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <h2>Pedir una cita</h2>
-    <form method="POST">
-        <label>Fecha:</label>
-        <input type="date" name="fecha" required>
-        <label>Hora:</label>
-        <input type="time" name="hora" required>
-        <label>Motivo:</label>
-        <textarea name="motivo" required></textarea>
-        <button type="submit">Pedir cita</button>
-    </form>
-
-    <h2>Tus citas</h2>
-    <table>
-        <tr>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>Motivo</th>
-        </tr>
-        <?php while ($cita = $citas->fetch_assoc()): ?>
-        <tr>
-            <td><?php echo $cita['fecha']; ?></td>
-            <td><?php echo $cita['hora']; ?></td>
-            <td><?php echo $cita['motivo']; ?></td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
+<body class="">
+<header class="header">
+        <div class="header-div">
+            <nav class="nav-bar">
+                <figure>
+                    <a href="../index.html"><img class="logo" src="assets/images/Logo.png" alt="" width="120px"></a>
+                </figure>
+                <figure>
+                    <img class="tittle" src="assets/images/tittle.png" alt="">
+                </figure>
+                <ol class="list-nav">
+                    <a href="./salud.html">
+                        <li class="li-header">Salud</li>
+                    </a>
+                    <a href="./certificaciones.html">
+                        <li class="li-header">Certificaciones</li>
+                    </a>
+                    <a href="./afiliate.html">
+                        <li class="li-header">Afiliate</li>
+                    </a>
+                    <a href="./sobreNosotros.html">
+                        <li class="li-header">Sobre Nosotros</li>
+                    </a>
+                    <a href="./login.html">
+                        <li class="login li-header">Iniciar sesion</li>
+                    </a>
+                    <a href="./register.html">
+                        <li class="register li-header">Registrarse</li>
+                    </a>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <main class="citas-section">
+        <h2 class="cita">Pedir una cita</h2>
+        <div class="citas-container">
+        <form method="POST">
+            <label class="citaa cita">Fecha:</label>
+            <input type="date" name="fecha" required>
+            <label class="citaa cita">Hora:</label>
+            <input type="time" name="hora" required>
+            <label class="citaa cita">Motivo:</label>
+            <textarea name="motivo" required></textarea>
+            <button type="submit" class="btn-cita">Pedir cita</button>
+        </form>
+        </div>
+        <h2 class="cita">Tus citas</h2>
+        <table class="table-citas">
+            <tr class="cita">
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Motivo</th>
+            </tr>
+            <?php while ($cita = $citas->fetch_assoc()): ?>
+            <tr>
+                <td class="cita"><?php echo $cita['fecha']; ?></td>
+                <td class="cita"><?php echo $cita['hora']; ?></td>
+                <td class="cita"><?php echo $cita['motivo']; ?></td>
+            </tr>
+            <?php endwhile; ?>
+        </table>
+    </main>
 </body>
 </html>

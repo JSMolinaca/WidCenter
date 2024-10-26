@@ -685,3 +685,61 @@ a:hover {
 .bg-black {
     color: black;
 }
+
+/* ESTILOS PARA PAGE CITAS.PHP */
+
+.citas-section {
+    background-color: #f0f0f0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.citas-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1A1E7C;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.citaa {
+    color: #0AFD4E!important;
+}
+
+.cita {
+    font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cita::before,
+.cita::after {
+    font-size: 30px;
+    color: #1A1E7C;
+    vertical-align: middle;
+}
+
+.table-citas {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-cita {
+    font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+    background-color: #0DFF6E;
+    color: #1A1E7C;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-cita:hover {
+    background-color: #0cc255;
+}
