@@ -57,16 +57,13 @@ $citas = $stmt->get_result();
                         <li class="li-header">Certificaciones</li>
                     </a>
                     <a href="./afiliate.html">
-                        <li class="li-header">Afiliate</li>
+                        <li class="li-header">Consultas</li>
                     </a>
                     <a href="./sobreNosotros.html">
-                        <li class="li-header">Sobre Nosotros</li>
+                        <li class="li-header">Mi perfil</li>
                     </a>
                     <a href="./login.html">
-                        <li class="login li-header">Iniciar sesion</li>
-                    </a>
-                    <a href="./register.html">
-                        <li class="register li-header">Registrarse</li>
+                        <li class="login li-header">Cerrar sesion</li>
                     </a>
                 </ol>
             </nav>
