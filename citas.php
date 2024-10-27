@@ -62,7 +62,7 @@ $citas = $stmt->get_result();
                     <a href="./sobreNosotros.html">
                         <li class="li-header">Mi perfil</li>
                     </a>
-                    <a href="./login.html">
+                    <a href="./logout.php">
                         <li class="login li-header">Cerrar sesion</li>
                     </a>
                 </ol>
