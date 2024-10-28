@@ -72,6 +72,13 @@
 
 } */
 
+.logout {
+    background-color: red;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .login {
     background-color: #1A1E7C;
     color: #FFFFFF;
@@ -742,4 +749,37 @@ a:hover {
 
 .btn-cita:hover {
     background-color: #0cc255;
+}
+
+.btn-editar {
+    font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+    background-color: #FFD700;
+    color: #1A1E7C;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #E6BE00 ;
+}
+
+.btn-eliminar {
+    font-family: OrelegaOne, Arial, Helvetica, sans-serif;
+    background-color: #FF4C4C;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #CC0000;
 }

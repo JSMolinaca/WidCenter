@@ -63,7 +63,7 @@ $citas = $stmt->get_result();
                         <li class="li-header">Mi perfil</li>
                     </a>
                     <a href="./logout.php">
-                        <li class="login li-header">Cerrar sesion</li>
+                        <li class="logout li-header">Cerrar sesion</li>
                     </a>
                 </ol>
             </nav>
@@ -88,12 +88,17 @@ $citas = $stmt->get_result();
                 <th>Fecha</th>
                 <th>Hora</th>
                 <th>Motivo</th>
+                <th>Acciones</th>
             </tr>
             <?php while ($cita = $citas->fetch_assoc()): ?>
             <tr>
                 <td class="cita"><?php echo $cita['fecha']; ?></td>
                 <td class="cita"><?php echo $cita['hora']; ?></td>
                 <td class="cita"><?php echo $cita['motivo']; ?></td>
+                <td class="cita">
+                    <button class="btn-editar" onclick="editarCita(<?php echo $cita['id']; ?>">Editar</button>
+                    <button class="btn-eliminar" onclick="eliminarCita(<?php echo $cita['id']; ?>">Eliminar</button>
+                </td>
             </tr>
             <?php endwhile; ?>
         </table>
