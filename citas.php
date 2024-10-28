@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $motivo = $_POST['motivo'];
 
     $query = "INSERT INTO citas (usuario_id, fecha, hora, motivo) VALUES (?, ?, ?, ?)";
-    $stmt = $conn->prepare($query);
+    $stmt = $conexion->prepare($query);
     $stmt->bind_param("isss", $usuario_id, $fecha, $hora, $motivo);
     $stmt->execute();
     echo "Cita registrada exitosamente";

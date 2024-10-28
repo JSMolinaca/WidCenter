@@ -7,6 +7,3 @@ function eliminarCita(id) {
         window.location.href = `eliminarCita.php?id=${id}`;
         }
 }
-
-
-alert("Javascript cargadno")

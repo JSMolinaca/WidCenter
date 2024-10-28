@@ -1,18 +1,27 @@
-<?php
+<?php 
+
 include 'conexion.php';
+
+if (!isset($conexion)) {
+    die("Error: no se pudo establecer la conexion a la base de datos");
+}
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    $conexion->query("SELECT * FROM citas WHERE id = $id");
-    $cita = $consulta->fetch_assoc();
+    // Realiza la consulta para eliminar la cita
+    $consulta = "DELETE FROM citas WHERE id = $id";
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $conexion->query("DELETE FROM citas WHERE id = $id");
-        
-    header( "Location: citas.php");
-    exit();
+    if ($conexion->query($consulta) === TRUE) {
+        echo "Cita eliminada correctamente.";
+        header("Location: citas.php"); // Redirige a la página principal de citas
+        exit();
+    } else {
+        echo "Error al eliminar la cita: " . $conexion->error;
     }
+} else {
+    echo "ID de cita no especificado.";
+    exit();
 }
 ?>
 
