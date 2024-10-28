@@ -783,3 +783,23 @@ a:hover {
 .btn-eliminar:hover {
     background-color: #CC0000;
 }
+
+/* ESTILOS EDITAR CITAS PHP */
+.form-editar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-cita, .textarea-cita {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.texarea-cita {
+    height: 100px;
+    resize: none;
+}
