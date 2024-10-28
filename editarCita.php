@@ -1,25 +1,41 @@
-<?php 
+<?php
+// Incluye el archivo de conexión
 include 'conexion.php';
 
-//VERIFICAR SI SE PASO UN ID
+// Verifica si el ID de la cita está presente
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    $consulta = $conexion->query("SELECT * FROM citas WHERE id = $id");
-    $cita = $consulta->fetch_assoc();
+    // Realiza la consulta para obtener los detalles de la cita
+    $consulta = "SELECT * FROM citas WHERE id = $id";
+    $resultado = $conexion->query($consulta);
+
+    if ($resultado->num_rows > 0) {
+        $cita = $resultado->fetch_assoc();
+    } else {
+        echo "Cita no encontrada.";
+        exit();
+    }
+} else {
+    echo "ID de cita no especificado.";
+    exit();
 }
 
-//Actualizar la cita cuando se envia el form
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// Verifica si el formulario ha sido enviado
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fecha = $_POST['fecha'];
     $hora = $_POST['hora'];
     $motivo = $_POST['motivo'];
 
-    // ACTUALIZAR BD
-    $conexion->query("UPDATE citas SET fecha = '$fecha', hora = '$hora', motivo = '$motivo' WHERE id = $id");
-
-    header("Location: citas.php");
-    exit();
+    // Actualiza la cita en la base de datos
+    $actualizarConsulta = "UPDATE citas SET fecha = '$fecha', hora = '$hora', motivo = '$motivo' WHERE id = $id";
+    if ($conexion->query($actualizarConsulta) === TRUE) {
+        echo "Cita actualizada correctamente.";
+        header("Location: citas.php"); // Redirige a la página principal de citas
+        exit();
+    } else {
+        echo "Error al actualizar la cita: " . $conexion->error;
+    }
 }
 ?>
 

@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 //Consult de citas
 $query = "SELECT * FROM citas WHERE usuario_id = ?";
-$stmt = $conn->prepare($query);
+$stmt = $conexion->prepare($query);
 $stmt->bind_param("i", $usuario_id);
 $stmt->execute();
 $citas = $stmt->get_result();
@@ -96,12 +96,13 @@ $citas = $stmt->get_result();
                 <td class="cita"><?php echo $cita['hora']; ?></td>
                 <td class="cita"><?php echo $cita['motivo']; ?></td>
                 <td class="cita">
-                    <button class="btn-editar" onclick="editarCita(<?php echo $cita['id']; ?>">Editar</button>
-                    <button class="btn-eliminar" onclick="eliminarCita(<?php echo $cita['id']; ?>">Eliminar</button>
+                    <button class="btn-editar" onclick="editarCita(<?php echo $cita['id']; ?>)">Editar</button>
+                    <button class="btn-eliminar" onclick="eliminarCita(<?php echo $cita['id']; ?>)">Eliminar</button>
                 </td>
             </tr>
             <?php endwhile; ?>
         </table>
     </main>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

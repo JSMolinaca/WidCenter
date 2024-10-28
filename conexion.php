@@ -6,11 +6,11 @@ $password_db = "";          // Cambia esto por tu contraseña de la base de dato
 $dbname = "login_widcenter"; // Cambia esto por el nombre de tu base de datos
 
 // Crear la conexión
-$conn = new mysqli($servername, $username_db, $password_db, $dbname);
+$conexion = new mysqli($servername, $username_db, $password_db, $dbname);
 
 // Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+if ($conexion->connect_error) {
+    die("Conexión fallida: " . $conexion->connect_error);
 }
 
 //Iniciar sesion solo si no esta iniciada
@@ -21,12 +21,12 @@ if (session_status() == PHP_SESSION_NONE) {
 // Verificar si se enviaron los datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($_POST['password'])) {
     // Escapar los datos para evitar inyección SQL
-    $username = $conn->real_escape_string($_POST['username']);
-    $password = $conn->real_escape_string($_POST['password']);
+    $username = $conexion->real_escape_string($_POST['username']);
+    $password = $conexion->real_escape_string($_POST['password']);
     
     // Consulta para verificar el nombre de usuario y la contraseña
     $sql = "SELECT * FROM usuarios WHERE usuario = '$username' AND contraseña = '$password'";
-    $result = $conn->query($sql);
+    $result = $conexion->query($sql);
 
     if ($result->num_rows > 0) {
         //Si el usuario existe, iniciar sesion
